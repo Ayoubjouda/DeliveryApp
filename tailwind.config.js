@@ -14,11 +14,13 @@ module.exports = {
         dotBg: "#EBECF3",
         darkOrange: "#ca5331",
         darkWhite: "#e6e6e6",
+        lightGray: "#F8F9Fb",
       },
     },
     fontFamily: {
       AvenirRoman: "Avenir-Roman",
       AvenirHeavy: "Avenir-Heavy",
+      AvenirMedium: "Avenir-Medium",
     },
   },
   plugins: [],
