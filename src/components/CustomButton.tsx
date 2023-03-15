@@ -10,7 +10,7 @@ const CustomButton = ({ text, type, icon }: { text: string; type: string; icon?:
         </TouchableOpacity>
       ) : null}
       {type === "google" ? (
-        <TouchableOpacity className="bg-white  relative w-[327px] h-[56px] flex-row-reverse justify-center items-center mt-3 border border-subTitle rounded-[30px]  active:bg-darkWhite">
+        <TouchableOpacity className="bg-white  relative w-[327px] h-[56px] flex-row-reverse justify-center items-center mt-3 border border-dotBg rounded-[30px]  active:bg-darkWhite">
           <Text className="text-lg text-black border border-black font-AvenirHeavy">{text}</Text>
           {icon ? (
             <>

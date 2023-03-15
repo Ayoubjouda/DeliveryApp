@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import {
   View,
   Text,
@@ -10,17 +10,12 @@ import {
   ScrollView,
   Animated,
 } from "react-native";
-import BackButton from "../components/BackButton";
-import FormInput from "../components/FormInput";
-import CustomButton from "../components/CustomButton";
-import personIcon from "../../assets/icons/profile";
-import callIcon from "../../assets/icons/call";
-import lockIcon from "../../assets/icons/lock";
-import GoogleIcon from "../../assets/icons/Google";
+import { googleIcon } from "assets/icons";
+import { FormInput, CustomButton, BackButton, SignUp, SignIn } from "components";
+
 const SignUpIn = () => {
-
   const [startValue, setStartValue] = useState(new Animated.Value(0));
-
+  const [signType, setSignType] = useState("Up");
   const duration = 300;
   const MoveAnimRight = () => {
     Animated.timing(startValue, {
@@ -31,16 +26,18 @@ const SignUpIn = () => {
     setTimeout(() => {
       setStartValue(new Animated.Value(180));
     }, 400);
+    setSignType("In");
   };
   const MoveAnimLeft = () => {
     Animated.timing(startValue, {
-      toValue: 0,
+      toValue: 2,
       duration: duration,
       useNativeDriver: true,
     }).start();
     setTimeout(() => {
-      setStartValue(new Animated.Value(0));
+      setStartValue(new Animated.Value(2));
     }, 400);
+    setSignType("Up");
   };
 
   return (
@@ -67,33 +64,21 @@ const SignUpIn = () => {
               }}
               className={`bg-white w-[49%] h-[50px] absolute rounded-3xl left-0 `}
             ></Animated.View>
-            <TouchableOpacity
-              onPress={MoveAnimLeft}
-              className="w-[49%] h-[50px] flex-row justify-center items-center  rounded-3xl "
-            >
+            <TouchableOpacity onPress={MoveAnimLeft} className="w-[49%] h-[50px] flex-row justify-center items-center  rounded-3xl ">
               <Text className="text-sm text-center border border-black font-AvenirMedium">Sign Up</Text>
             </TouchableOpacity>
-            <TouchableOpacity
-              onPress={MoveAnimRight}
-              className="w-[49%] h-[50px] flex-row justify-center items-center  rounded-3xl"
-            >
+            <TouchableOpacity onPress={MoveAnimRight} className="w-[49%] h-[50px] flex-row justify-center items-center  rounded-3xl">
               <Text className="w-[50%] text-center font-AvenirMedium text-sm">Sign In</Text>
             </TouchableOpacity>
           </View>
 
           {/* // SignUp Form */}
-          <View>
-            <FormInput label="Full Name" icon={personIcon} placeholder="Enter your name" />
-            <FormInput label="Phone Number" icon={callIcon} placeholder="Enter your number" />
-            <FormInput label="Password" icon={lockIcon} placeholder="Enter your password" />
-          </View>
+          {signType === "Up" ? <SignUp /> : <SignIn />}
           {/* // SignUp Buttons */}
-          <View className="items-center justify-center mx-4 mt-7 max-w-screen">
-            <CustomButton type="orange" text="Create Account" />
-
+          <View className="items-center justify-center mx-4 mt-2 max-w-screen">
             <View className="h-[1px] w-full mt-7 bg-dotBg mx-10"></View>
             <Text className="mt-3 text-sm text-subTitle font-AvenirRoman"> Or Sign Up With</Text>
-            <CustomButton type="google" text=" Sign Up with Google " icon={GoogleIcon} />
+            <CustomButton type="google" text=" Sign Up with Google " icon={googleIcon} />
           </View>
         </ScrollView>
       </TouchableWithoutFeedback>

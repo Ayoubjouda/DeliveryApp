@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Image } from "react-native";
-import logoIcon from "../../assets/icons/logo.js";
+import { logoIcon } from "assets/icons";
 import { SvgXml } from "react-native-svg";
 const SplashScreen = () => {
   return (

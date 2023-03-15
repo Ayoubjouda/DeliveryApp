@@ -1,9 +1,8 @@
 import React, { useCallback } from "react";
 import { StatusBar } from "expo-status-bar";
 import { View } from "react-native";
-import SplashScreen from "./src/screens/Splashscreen";
-import OnBoarding from "./src/screens/OnBoarding";
-import SignUpIn from "./src/screens/SignUpIn";
+import { CodeVerification, OnBoarding, SignUpIn, SplashScreen } from "screens";
+
 import { useFonts } from "expo-font";
 import * as Splashscreen from "expo-splash-screen";
 
@@ -29,10 +28,11 @@ export default function App() {
   }
 
   return (
-    <View className="items-center justify-center flex-1 ">
+    <View className="flex-1 ">
       {/* <SplashScreen /> */}
       {/* <OnBoarding /> */}
-      <SignUpIn />
+      {/* <SignUpIn /> */}
+      <CodeVerification />
       <StatusBar style="auto" />
     </View>
   );

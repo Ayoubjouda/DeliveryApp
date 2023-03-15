@@ -1,6 +1,6 @@
 import React from "react";
 import { View, TouchableOpacity, Text } from "react-native";
-import Carousrel from "../components/Carousrel";
+import { Carousrel } from "components";
 
 const OnBoarding = () => {
   return (
