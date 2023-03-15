@@ -1,6 +1,8 @@
 import React from "react";
 import { View } from "react-native";
-import { FormInput, CustomButton } from "components";
+import FormInput from "./FormInput";
+import CustomButton from "./CustomButton";
+
 import { profileIcon, callIcon, lockIcon } from "assets/icons";
 const SignIn = () => {
   return (
@@ -8,7 +10,7 @@ const SignIn = () => {
       <FormInput label="Username" icon={profileIcon} placeholder="Enter username" />
       <FormInput label="Password" icon={lockIcon} placeholder="Enter your password" />
       <View className="items-center mt-7">
-        <CustomButton type="orange" text="Sign In" />
+        <CustomButton onPress={""} type="orange" text="Sign In" />
       </View>
     </View>
   );

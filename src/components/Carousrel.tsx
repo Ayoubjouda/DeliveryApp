@@ -1,6 +1,6 @@
 import React, { useCallback, useState, useRef } from "react";
 import { FlatList, View, NativeScrollEvent, NativeSyntheticEvent } from "react-native";
-import { Slide } from "components";
+import Slide from "./Slide";
 
 const slideList = [
   {

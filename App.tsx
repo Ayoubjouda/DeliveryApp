@@ -2,7 +2,7 @@ import React, { useCallback } from "react";
 import { StatusBar } from "expo-status-bar";
 import { View } from "react-native";
 import { CodeVerification, OnBoarding, SignUpIn, SplashScreen } from "screens";
-
+import Navigation from "./src/navigation/Navigation";
 import { useFonts } from "expo-font";
 import * as Splashscreen from "expo-splash-screen";
 
@@ -32,7 +32,7 @@ export default function App() {
       {/* <SplashScreen /> */}
       {/* <OnBoarding /> */}
       {/* <SignUpIn /> */}
-      <CodeVerification />
+      <Navigation />
       <StatusBar style="auto" />
     </View>
   );

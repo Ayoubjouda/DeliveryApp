@@ -1,11 +1,16 @@
 import React from "react";
 import { View, Text, TextInput, TouchableOpacity } from "react-native";
 import { BackButton, CustomButton } from "components";
-const CodeVerification = () => {
+import type { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { RootStackParamList } from "src/utlis/types";
+
+type Props = NativeStackScreenProps<RootStackParamList>;
+
+const CodeVerification = ({ navigation }: Props) => {
   return (
     <View className="flex-1">
       <View className="absolute top-12 left-5">
-        <BackButton />
+        <BackButton onPress={navigation.goBack()} />
       </View>
       {/* // Title and SubTitle */}
       <View className="mx-5 mt-28">
@@ -46,7 +51,7 @@ const CodeVerification = () => {
         <Text className="text-lg font-AvenirHeavy">02:39</Text>
       </View>
       <View className="items-center">
-        <CustomButton text="Submit" type="orange" />
+        <CustomButton text="Submit" type="orange" onPress={() => navigation.goBack()} />
 
         <View className="flex-row justify-center gap-1 mt-10">
           <Text className="text-base text-gray-500 font-AvenirRoman">Didn’t receive the code?</Text>

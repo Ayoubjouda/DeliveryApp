@@ -13,7 +13,7 @@ import {
 import { googleIcon } from "assets/icons";
 import { FormInput, CustomButton, BackButton, SignUp, SignIn } from "components";
 
-const SignUpIn = () => {
+const SignUpIn = ({ navigation }: { navigation: any }) => {
   const [startValue, setStartValue] = useState(new Animated.Value(0));
   const [signType, setSignType] = useState("Up");
   const duration = 300;
@@ -45,7 +45,7 @@ const SignUpIn = () => {
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <ScrollView className="flex-1">
           <View className="absolute top-12 left-5">
-            <BackButton />
+            <BackButton onPress={() => navigation.goBack()} />
           </View>
           {/* // Title and SubTitle */}
           <View className="mx-5 mt-28">
@@ -73,12 +73,12 @@ const SignUpIn = () => {
           </View>
 
           {/* // SignUp Form */}
-          {signType === "Up" ? <SignUp /> : <SignIn />}
+          {signType === "Up" ? <SignUp navigation={navigation} /> : <SignIn />}
           {/* // SignUp Buttons */}
           <View className="items-center justify-center mx-4 mt-2 max-w-screen">
             <View className="h-[1px] w-full mt-7 bg-dotBg mx-10"></View>
             <Text className="mt-3 text-sm text-subTitle font-AvenirRoman"> Or Sign Up With</Text>
-            <CustomButton type="google" text=" Sign Up with Google " icon={googleIcon} />
+            <CustomButton onPress={() => navigation.navigate()} type="google" text=" Sign Up with Google " icon={googleIcon} />
           </View>
         </ScrollView>
       </TouchableWithoutFeedback>

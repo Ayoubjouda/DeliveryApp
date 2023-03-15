@@ -1,11 +1,14 @@
 import React from "react";
 import { TouchableOpacity, Text } from "react-native";
 import { SvgXml } from "react-native-svg";
-const CustomButton = ({ text, type, icon }: { text: string; type: string; icon?: string }) => {
+const CustomButton = ({ text, type, icon, onPress }: { text: string; type: string; icon?: string; onPress: any }) => {
   return (
     <>
       {type === "orange" ? (
-        <TouchableOpacity className="bg-orange w-[327px] h-[56px] justify-center items-center  rounded-[30px] active:bg-darkOrange">
+        <TouchableOpacity
+          onPress={onPress}
+          className="bg-orange w-[327px] h-[56px] justify-center items-center  rounded-[30px] active:bg-darkOrange"
+        >
           <Text className="text-lg text-white font-AvenirHeavy ">{text}</Text>
         </TouchableOpacity>
       ) : null}
