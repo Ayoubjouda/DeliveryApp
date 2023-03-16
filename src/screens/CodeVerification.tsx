@@ -8,9 +8,9 @@ type Props = NativeStackScreenProps<RootStackParamList>;
 
 const CodeVerification = ({ navigation }: Props) => {
   return (
-    <View className="flex-1">
+    <View className="flex-1 bg-white">
       <View className="absolute top-12 left-5">
-        <BackButton onPress={navigation.goBack()} />
+        <BackButton onPress={() => navigation.goBack()} />
       </View>
       {/* // Title and SubTitle */}
       <View className="mx-5 mt-28">
@@ -51,7 +51,7 @@ const CodeVerification = ({ navigation }: Props) => {
         <Text className="text-lg font-AvenirHeavy">02:39</Text>
       </View>
       <View className="items-center">
-        <CustomButton text="Submit" type="orange" onPress={() => navigation.goBack()} />
+        <CustomButton text="Submit" type="orange" onPress={() => navigation.navigate("CodeConfirmation")} />
 
         <View className="flex-row justify-center gap-1 mt-10">
           <Text className="text-base text-gray-500 font-AvenirRoman">Didn’t receive the code?</Text>

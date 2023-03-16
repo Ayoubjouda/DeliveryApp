@@ -12,8 +12,10 @@ import {
 } from "react-native";
 import { googleIcon } from "assets/icons";
 import { FormInput, CustomButton, BackButton, SignUp, SignIn } from "components";
-
-const SignUpIn = ({ navigation }: { navigation: any }) => {
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { RootStackParamList } from "src/utlis/types";
+type Props = NativeStackScreenProps<RootStackParamList>;
+const SignUpIn = ({ navigation }: Props) => {
   const [startValue, setStartValue] = useState(new Animated.Value(0));
   const [signType, setSignType] = useState("Up");
   const duration = 300;
@@ -43,7 +45,7 @@ const SignUpIn = ({ navigation }: { navigation: any }) => {
   return (
     <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : "height"} enabled className="relative flex-1 ">
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-        <ScrollView className="flex-1">
+        <ScrollView className="flex-1 bg-white">
           <View className="absolute top-12 left-5">
             <BackButton onPress={() => navigation.goBack()} />
           </View>
@@ -73,12 +75,17 @@ const SignUpIn = ({ navigation }: { navigation: any }) => {
           </View>
 
           {/* // SignUp Form */}
-          {signType === "Up" ? <SignUp navigation={navigation} /> : <SignIn />}
+          {signType === "Up" ? <SignUp onSignIn={() => navigation.navigate("CodeVerification")} /> : <SignIn />}
           {/* // SignUp Buttons */}
           <View className="items-center justify-center mx-4 mt-2 max-w-screen">
             <View className="h-[1px] w-full mt-7 bg-dotBg mx-10"></View>
             <Text className="mt-3 text-sm text-subTitle font-AvenirRoman"> Or Sign Up With</Text>
-            <CustomButton onPress={() => navigation.navigate()} type="google" text=" Sign Up with Google " icon={googleIcon} />
+            <CustomButton
+              onPress={() => navigation.navigate("CodeVerification")}
+              type="google"
+              text=" Sign Up with Google "
+              icon={googleIcon}
+            />
           </View>
         </ScrollView>
       </TouchableWithoutFeedback>

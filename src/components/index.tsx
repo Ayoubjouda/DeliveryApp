@@ -4,4 +4,6 @@ export { default as CustomButton } from "./CustomButton";
 export { default as SignIn } from "./SignIn";
 export { default as SignUp } from "./SignUp";
 export { default as Carousrel } from "./Carousrel";
+export { default as HomeHeader } from "./HomeHeader";
 export { default as Slide } from "./Slide";
+export { default as CustomInput } from "./CustomInput";
