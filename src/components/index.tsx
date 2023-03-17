@@ -8,3 +8,4 @@ export { default as HomeHeader } from "./HomeHeader";
 export { default as Slide } from "./Slide";
 export { default as CustomInput } from "./CustomInput";
 export { default as FeatureCard } from "./FeatureCard";
+export { default as ServicesCard } from "./ServicesCard";

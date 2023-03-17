@@ -1,9 +1,8 @@
 import { View, Text, ScrollView } from "react-native";
 import React from "react";
-import { HomeHeader } from "components";
-import { FeatureCard } from "components";
-import { dollarIcon } from "assets/icons";
+import { HomeHeader, FeatureCard, ServicesCard } from "components";
 import { FEATURE_DATA } from "utils/constants";
+
 type Props = {};
 
 const Home = (props: Props) => {
@@ -21,6 +20,10 @@ const Home = (props: Props) => {
               ))
             : null}
         </View>
+      </View>
+      <View className="mx-3 mt-5 ">
+        <Text className="text-lg font-AvenirHeavy">Services and Product</Text>
+        <View className="items-center w-full mt-1"></View>
       </View>
     </ScrollView>
   );
