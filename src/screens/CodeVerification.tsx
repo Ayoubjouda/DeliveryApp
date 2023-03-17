@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, TextInput, TouchableOpacity } from "react-native";
 import { BackButton, CustomButton } from "components";
 import type { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { RootStackParamList } from "src/utlis/types";
+import { RootStackParamList } from "src/utils/types";
 
 type Props = NativeStackScreenProps<RootStackParamList>;
 

@@ -13,7 +13,7 @@ import {
 import { googleIcon } from "assets/icons";
 import { FormInput, CustomButton, BackButton, SignUp, SignIn } from "components";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { RootStackParamList } from "src/utlis/types";
+import { RootStackParamList } from "src/utils/types";
 type Props = NativeStackScreenProps<RootStackParamList>;
 const SignUpIn = ({ navigation }: Props) => {
   const [startValue, setStartValue] = useState(new Animated.Value(0));

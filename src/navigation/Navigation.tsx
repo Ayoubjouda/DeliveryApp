@@ -3,7 +3,7 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { CodeVerification, SignUpIn, OnBoarding, CodeConfirmation, Home } from "screens";
 import { createStackNavigator } from "@react-navigation/stack";
-import { RootStackParamList } from "src/utlis/types";
+import { RootStackParamList } from "src/utils/types";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 type Props = {};

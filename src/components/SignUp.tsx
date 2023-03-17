@@ -4,7 +4,7 @@ import FormInput from "./FormInput";
 import CustomButton from "./CustomButton";
 import { profileIcon, callIcon, lockIcon } from "assets/icons";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { RootStackParamList } from "src/utlis/types";
+import { RootStackParamList } from "src/utils/types";
 
 const SignUp = ({ onSignIn }: any) => {
   return (

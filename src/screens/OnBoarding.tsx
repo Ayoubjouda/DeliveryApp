@@ -1,7 +1,7 @@
 import React from "react";
 import { View, TouchableOpacity, Text } from "react-native";
 import { Carousrel, CustomButton } from "components";
-import { RootStackParamList } from "src/utlis/types";
+import { RootStackParamList } from "src/utils/types";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 type Props = NativeStackScreenProps<RootStackParamList>;
 
