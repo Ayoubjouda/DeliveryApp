@@ -4,12 +4,12 @@
     "slug": "MusicApp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/img/splach.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/img/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "image": "./assets/img/splach.png",
+      "resizeMode": "fill",
+      "backgroundColor": "#1D272F"
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
@@ -17,7 +17,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/img/splach.png",
         "backgroundColor": "#ffffff"
       }
     },

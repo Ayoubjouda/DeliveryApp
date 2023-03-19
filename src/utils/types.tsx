@@ -4,4 +4,5 @@ export type RootStackParamList = {
   OnBoarding: undefined;
   CodeConfirmation: undefined;
   Home: undefined;
+  Notification: undefined;
 };
