@@ -24,7 +24,7 @@ const HomeHeader = ({ onPress }: Props) => {
           <Balance />
         </View>
         <View className="mx-5 mt-3 ">
-          <CustomInput type="numeric" rightIcon={scanIcon} leftIcon={searchIcon} placeholder="Enter track number" />
+          <CustomInput type="numeric" rightIcon={scanIcon} leftIcon={searchIcon} placeholder="Enter track number" variant="orange" />
         </View>
       </ImageBackground>
     </View>
