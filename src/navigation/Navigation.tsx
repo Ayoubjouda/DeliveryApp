@@ -52,7 +52,7 @@ const Navigation = (props: Props) => {
         <Stack.Screen name="SignInUp" component={SignUpIn} />
         <Stack.Screen name="CodeVerification" component={CodeVerification} />
         <Stack.Screen name="Home" component={TabNavigation} />
-        <Stack.Screen name="Notification" component={TrackingScreen} />
+        <Stack.Screen name="Notification" component={Notification} />
         <Stack.Screen name="Tracking" component={TrackingScreen} />
         <Stack.Group screenOptions={{ presentation: "transparentModal" }}>
           <Stack.Screen name="CodeConfirmation" component={CodeConfirmation} />
