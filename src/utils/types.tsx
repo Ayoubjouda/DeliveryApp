@@ -5,4 +5,5 @@ export type RootStackParamList = {
   CodeConfirmation: undefined;
   Home: undefined;
   Notification: undefined;
+  Tracking: undefined;
 };

@@ -17,3 +17,4 @@ export { default as messageIcon } from "./message";
 export { default as othersIcon } from "./others";
 export { default as walletIcon } from "./wallet";
 export { default as messageIconSvg } from "./messageSvg";
+export { default as noHistory } from "./noHistory";
