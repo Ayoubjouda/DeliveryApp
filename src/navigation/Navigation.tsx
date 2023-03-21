@@ -1,7 +1,7 @@
 import { View, Text } from "react-native";
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { CodeVerification, SignUpIn, OnBoarding, CodeConfirmation, Home, Notification, TrackingScreen } from "screens";
+import { CodeVerification, SignUpIn, OnBoarding, CodeConfirmation, Home, Notification, TrackingScreen, DetailLocation } from "screens";
 import { createStackNavigator } from "@react-navigation/stack";
 import { RootStackParamList } from "src/utils/types";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -54,6 +54,7 @@ const Navigation = (props: Props) => {
         <Stack.Screen name="Home" component={TabNavigation} />
         <Stack.Screen name="Notification" component={Notification} />
         <Stack.Screen name="Tracking" component={TrackingScreen} />
+        <Stack.Screen name="DetailLocation" component={DetailLocation} />
         <Stack.Group screenOptions={{ presentation: "transparentModal" }}>
           <Stack.Screen name="CodeConfirmation" component={CodeConfirmation} />
         </Stack.Group>

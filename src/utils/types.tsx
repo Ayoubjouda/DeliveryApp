@@ -6,4 +6,5 @@ export type RootStackParamList = {
   Home: undefined;
   Notification: undefined;
   Tracking: undefined;
+  DetailLocation: undefined;
 };

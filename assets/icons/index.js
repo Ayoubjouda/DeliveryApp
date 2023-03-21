@@ -18,3 +18,7 @@ export { default as othersIcon } from "./others";
 export { default as walletIcon } from "./wallet";
 export { default as messageIconSvg } from "./messageSvg";
 export { default as noHistory } from "./noHistory";
+export { default as starIcon } from "./star";
+export { default as recordCircleIcon } from "./recordCircle";
+export { default as locationDividerIcon } from "./locationDivider";
+export { default as locationIcon } from "./location";

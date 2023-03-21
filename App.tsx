@@ -5,6 +5,7 @@ import { CodeVerification, OnBoarding, SignUpIn, SplashScreen } from "screens";
 import Navigation from "./src/navigation/Navigation";
 import { useFonts } from "expo-font";
 import * as Splashscreen from "expo-splash-screen";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 export default function App() {
   const [AvenirRoman] = useFonts({
@@ -28,12 +29,14 @@ export default function App() {
   }
 
   return (
-    <View className="flex-1 ">
-      {/* <SplashScreen /> */}
-      {/* <OnBoarding /> */}
-      {/* <SignUpIn /> */}
-      <Navigation />
-      <StatusBar style="auto" />
-    </View>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <View className="flex-1 ">
+        {/* <SplashScreen /> */}
+        {/* <OnBoarding /> */}
+        {/* <SignUpIn /> */}
+        <Navigation />
+        <StatusBar style="auto" />
+      </View>
+    </GestureHandlerRootView>
   );
 }

@@ -9,7 +9,7 @@ type Props = NativeStackScreenProps<RootStackParamList>;
 const Home = ({ navigation }: Props) => {
   return (
     <ScrollView className="flex-1 bg-white">
-      <HomeHeader onPress={() => navigation.navigate("Notification")} />
+      <HomeHeader onPress={() => navigation.navigate("DetailLocation")} />
       <View className="mx-3 mt-5">
         <Text className="text-lg font-AvenirHeavy">Features</Text>
         <View className="flex-row flex-wrap justify-center gap-5 mt-1">
