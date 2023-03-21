@@ -11,3 +11,4 @@ export { default as FeatureCard } from "./FeatureCard";
 export { default as ServicesCard } from "./ServicesCard";
 export { default as PageHeader } from "./PageHeader";
 export { default as NotificationCard } from "./NotificationCard";
+export { default as TrackSearch } from "./TrackSearch";
