@@ -23,6 +23,7 @@ const Home = ({ navigation }: Props) => {
       </View>
       <View className="mx-3 mt-5 ">
         <Text className="text-lg font-AvenirHeavy">Services and Product</Text>
+       
         <View className="items-center w-full mt-1"></View>
       </View>
     </ScrollView>
