@@ -10,7 +10,7 @@ type Props = {
   variant: string;
 };
 
-const CustomInput = ({ placeholder, leftIcon = "", rightIcon = "", type, variant = "orange" }: Props) => {
+const CustomInput = ({ placeholder, leftIcon, rightIcon, type, variant = "orange" }: Props) => {
   return (
     <View>
       <View className="relative mt-3">
@@ -18,6 +18,7 @@ const CustomInput = ({ placeholder, leftIcon = "", rightIcon = "", type, variant
           <TextInput
             className="  border-dotBg bg-orange rounded-lg h-[52px] text-black  placeholder:px-12 placeholder:text-black "
             placeholder={placeholder}
+            placeholderTextColor={"#1D272F"}
             inputMode={type}
           />
         ) : (
@@ -28,8 +29,8 @@ const CustomInput = ({ placeholder, leftIcon = "", rightIcon = "", type, variant
           />
         )}
 
-        <SvgXml className="absolute top-4 left-3" width={22} height={22} xml={leftIcon} />
-        <SvgXml className="absolute top-4 right-3" width={22} height={22} xml={rightIcon} />
+        {leftIcon ? <SvgXml className="absolute top-4 left-3" width={22} height={22} xml={leftIcon} /> : null}
+        {rightIcon ? <SvgXml className="absolute top-4 right-3" width={22} height={22} xml={rightIcon} /> : null}
       </View>
     </View>
   );

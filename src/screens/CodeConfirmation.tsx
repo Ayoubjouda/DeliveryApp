@@ -61,7 +61,7 @@ const CodeConfirmation = ({ navigation }: any) => {
               Congratulation! your account already created. Please login to get amazing experience.
             </Text>
             <View className="mt-8">
-              <CustomButton onPress={() => navigation.navigate("Home")} text="Go to Home Page" type="orange" />
+              <CustomButton onPress={() => navigation.navigate("OverView")} text="Go to Home Page" type="orange" />
             </View>
           </View>
         </View>

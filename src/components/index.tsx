@@ -12,3 +12,4 @@ export { default as ServicesCard } from "./ServicesCard";
 export { default as PageHeader } from "./PageHeader";
 export { default as NotificationCard } from "./NotificationCard";
 export { default as TrackSearch } from "./TrackSearch";
+export { default as MessagePreview } from "./MessagePreview";

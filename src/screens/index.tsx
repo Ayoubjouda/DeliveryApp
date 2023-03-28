@@ -7,3 +7,4 @@ export { default as Home } from "./Home";
 export { default as Notification } from "./Notification";
 export { default as TrackingScreen } from "./TrackingScreen";
 export { default as DetailLocation } from "./DetailLocation";
+export { default as MessagesScreen } from "./MessagesScreen";

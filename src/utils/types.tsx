@@ -7,4 +7,5 @@ export type RootStackParamList = {
   Notification: undefined;
   Tracking: undefined;
   DetailLocation: undefined;
+  OverView: undefined;
 };

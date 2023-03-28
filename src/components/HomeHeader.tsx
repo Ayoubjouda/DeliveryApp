@@ -20,7 +20,7 @@ const HomeHeader = ({ onPress }: Props) => {
             <SvgXml xml={notificationIcon} />
           </TouchableOpacity>
         </View>
-        <View className="mx-5 mt-10">
+        <View className="mx-5 mt-8">
           <Balance />
         </View>
         <View className="mx-5 mt-3 ">

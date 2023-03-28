@@ -14,8 +14,8 @@ const Home = ({ navigation }: Props) => {
         <Text className="text-lg font-AvenirHeavy">Features</Text>
         <View className="flex-row flex-wrap justify-center gap-5 mt-1">
           {FEATURE_DATA
-            ? FEATURE_DATA?.map((el: any) => (
-                <View>
+            ? FEATURE_DATA?.map((el: any, index: number) => (
+                <View key={index}>
                   <FeatureCard icon={el.icon} name={el.name} />
                 </View>
               ))
