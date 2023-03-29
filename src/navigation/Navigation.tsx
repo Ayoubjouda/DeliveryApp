@@ -11,6 +11,7 @@ import {
   TrackingScreen,
   DetailLocation,
   MessagesScreen,
+  ProfileScreen,
 } from "screens";
 import { createStackNavigator } from "@react-navigation/stack";
 import { RootStackParamList } from "src/utils/types";
@@ -28,8 +29,15 @@ const TabNavigation = () => {
       initialRouteName="Home"
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
-          let iconName: "home" | "home-outline" | "ios-list" | "chatbox-ellipses-outline" | "chatbox-ellipses" | "ios-list-outline" =
-            "home";
+          let iconName:
+            | "home"
+            | "home-outline"
+            | "ios-list"
+            | "person-outline"
+            | "person"
+            | "chatbox-ellipses-outline"
+            | "chatbox-ellipses"
+            | "ios-list-outline" = "home";
 
           if (route.name === "Home") {
             iconName = focused ? "home" : "home-outline";
@@ -37,18 +45,20 @@ const TabNavigation = () => {
             iconName = focused ? "ios-list" : "ios-list-outline";
           } else if (route.name === "Messages") {
             iconName = focused ? "chatbox-ellipses" : "chatbox-ellipses-outline";
+          } else if (route.name === "Profile") {
+            iconName = focused ? "person" : "person-outline";
           }
-
           // You can return any component that you like here!
           return <Ionicons name={iconName} size={size} color={color} />;
         },
-        tabBarActiveTintColor: "tomato",
+        tabBarActiveTintColor: "#191D31",
         tabBarInactiveTintColor: "gray",
         headerShown: false,
       })}
     >
       <Tab.Screen name="Home" component={Home} />
       <Tab.Screen name="Messages" component={MessagesScreen} />
+      <Tab.Screen name="Profile" component={ProfileScreen} />
     </Tab.Navigator>
   );
 };
