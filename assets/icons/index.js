@@ -30,3 +30,4 @@ export { default as privacyOrangeIcon } from "./privacyOrange";
 export { default as teamOrangeIcon } from "./teamOrange";
 export { default as shareIcon } from "./shareOrange";
 export { default as mobileOrangeIcon } from "./mobileOrange";
+export { default as settingsIcon } from "./settings";

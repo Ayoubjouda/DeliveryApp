@@ -12,6 +12,7 @@ import {
   DetailLocation,
   MessagesScreen,
   ProfileScreen,
+  OrdersScreen,
 } from "screens";
 import { createStackNavigator } from "@react-navigation/stack";
 import { RootStackParamList } from "src/utils/types";
@@ -37,6 +38,8 @@ const TabNavigation = () => {
             | "person"
             | "chatbox-ellipses-outline"
             | "chatbox-ellipses"
+            | "ios-document-text"
+            | "ios-document-text-outline"
             | "ios-list-outline" = "home";
 
           if (route.name === "Home") {
@@ -47,6 +50,8 @@ const TabNavigation = () => {
             iconName = focused ? "chatbox-ellipses" : "chatbox-ellipses-outline";
           } else if (route.name === "Profile") {
             iconName = focused ? "person" : "person-outline";
+          } else if (route.name === "Orders") {
+            iconName = focused ? "ios-document-text" : "ios-document-text-outline";
           }
           // You can return any component that you like here!
           return <Ionicons name={iconName} size={size} color={color} />;
@@ -57,6 +62,8 @@ const TabNavigation = () => {
       })}
     >
       <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="Orders" component={OrdersScreen} />
+
       <Tab.Screen name="Messages" component={MessagesScreen} />
       <Tab.Screen name="Profile" component={ProfileScreen} />
     </Tab.Navigator>
