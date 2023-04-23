@@ -15,3 +15,4 @@ export { default as TrackSearch } from "./TrackSearch";
 export { default as MessagePreview } from "./MessagePreview";
 export { default as ProfileButton } from "./ProfileButton";
 export { default as Categories } from "./Categories";
+export { default as OrdersCard } from "./OrdersCard";

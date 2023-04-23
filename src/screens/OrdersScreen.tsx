@@ -1,13 +1,34 @@
-import { View, Text, ImageBackground, TouchableOpacity } from "react-native";
+import { View, Text, ImageBackground, TouchableOpacity, FlatList } from "react-native";
 import React from "react";
-import { CustomInput, Categories } from "components";
-import { notificationIcon, searchIcon, scanIcon, settingsIcon } from "assets/icons";
+import { CustomInput, Categories, OrdersCard } from "components";
+import { searchIcon, scanIcon, settingsIcon } from "assets/icons";
 import { SvgXml } from "react-native-svg";
 import homeHeaderBg from "assets/img/homeHeaderBg.jpg";
-import { ScrollView } from "react-native-gesture-handler";
 
 type Props = {};
 
+const categoriesData = [
+  {
+    id: "1",
+    title: "all",
+    active: true,
+  },
+  {
+    id: "2",
+    title: "pending",
+    active: false,
+  },
+  {
+    id: "3",
+    title: "On Process",
+    active: false,
+  },
+  {
+    id: "4",
+    title: "Delivered",
+    active: false,
+  },
+];
 const OrdersScreen = (props: Props) => {
   return (
     <View className="flex-1 bg-white">
@@ -34,14 +55,21 @@ const OrdersScreen = (props: Props) => {
           <Text className="w-[50%] text-center font-AvenirMedium text-sm">To Me</Text>
         </TouchableOpacity>
       </View>
-      <ScrollView horizontal className="flex flex-row gap-2 mx-3 mt-3 h-14">
-        <View>
-          <Categories active title="All" />
-        </View>
-        <View>
-          <Categories title="Pending" />
-        </View>
-      </ScrollView>
+      <View>
+        <FlatList
+          data={categoriesData}
+          horizontal
+          contentContainerStyle={{ gap: 8, flexDirection: "row", marginHorizontal: 12, marginVertical: 15, height: 35 }}
+          keyExtractor={(item) => item.id}
+          renderItem={({ item }) => <Categories active={item.active} title={item.title} />}
+        />
+      </View>
+
+      <FlatList
+        data={[1, 3, 4, 3]}
+        contentContainerStyle={{ gap: 10 }}
+        renderItem={({ item }) => <OrdersCard orderNumber="MM09132005" orderInfo="On transit area" orderStatus="Pending" />}
+      />
     </View>
   );
 };
