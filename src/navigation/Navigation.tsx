@@ -13,6 +13,7 @@ import {
   MessagesScreen,
   ProfileScreen,
   OrdersScreen,
+  EditProfile,
 } from "screens";
 import { createStackNavigator } from "@react-navigation/stack";
 import { RootStackParamList } from "src/utils/types";
@@ -86,6 +87,8 @@ const Navigation = (props: Props) => {
         <Stack.Screen name="Notification" component={Notification} />
         <Stack.Screen name="Tracking" component={TrackingScreen} />
         <Stack.Screen name="DetailLocation" component={DetailLocation} />
+        <Stack.Screen name="EditProfile" component={EditProfile} />
+
         <Stack.Group screenOptions={{ presentation: "transparentModal" }}>
           <Stack.Screen name="CodeConfirmation" component={CodeConfirmation} />
         </Stack.Group>

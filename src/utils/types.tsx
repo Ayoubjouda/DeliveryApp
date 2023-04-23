@@ -8,4 +8,5 @@ export type RootStackParamList = {
   Tracking: undefined;
   DetailLocation: undefined;
   OverView: undefined;
+  EditProfile: undefined;
 };

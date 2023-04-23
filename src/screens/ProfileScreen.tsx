@@ -20,7 +20,7 @@ import { ScrollView } from "react-native-gesture-handler";
 
 type Props = {};
 
-const ProfileScreen = (props: Props) => {
+const ProfileScreen = ({ navigation }: any) => {
   return (
     <View className="flex-1 bg-white">
       <View className=" min-h-[200px] w-full">
@@ -38,7 +38,7 @@ const ProfileScreen = (props: Props) => {
               </View>
             </View>
 
-            <TouchableOpacity className="px-4 py-2.5 bg-gray-600 rounded-2xl">
+            <TouchableOpacity className="px-4 py-2.5 bg-gray-600 rounded-2xl" onPress={() => navigation.navigate("EditProfile")}>
               <Text className="text-white">Edit Profile</Text>
             </TouchableOpacity>
           </View>

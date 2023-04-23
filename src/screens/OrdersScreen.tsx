@@ -59,15 +59,15 @@ const OrdersScreen = (props: Props) => {
         <FlatList
           data={categoriesData}
           horizontal
-          contentContainerStyle={{ gap: 8, flexDirection: "row", marginHorizontal: 12, marginVertical: 15, height: 35 }}
+          contentContainerStyle={{ gap: 8, flexDirection: "row", marginHorizontal: 12, marginVertical: 10, height: 35 }}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => <Categories active={item.active} title={item.title} />}
         />
       </View>
-
+      <Text className="mx-3 my-3 text-lg font-bold text-blueText font-AvenirHeavy"> 4 Results</Text>
       <FlatList
         data={[1, 3, 4, 3]}
-        contentContainerStyle={{ gap: 10 }}
+        contentContainerStyle={{ gap: 10, marginHorizontal: 10 }}
         renderItem={({ item }) => <OrdersCard orderNumber="MM09132005" orderInfo="On transit area" orderStatus="Pending" />}
       />
     </View>

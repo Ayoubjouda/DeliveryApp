@@ -31,3 +31,6 @@ export { default as teamOrangeIcon } from "./teamOrange";
 export { default as shareIcon } from "./shareOrange";
 export { default as mobileOrangeIcon } from "./mobileOrange";
 export { default as settingsIcon } from "./settings";
+export { default as callOrangeIcon } from "./callOrange";
+export { default as profileOrangeIcon } from "./profileOrange";
+export { default as editImageIcon } from "./editImage";
