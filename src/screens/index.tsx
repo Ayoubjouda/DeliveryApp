@@ -11,3 +11,5 @@ export { default as MessagesScreen } from "./MessagesScreen";
 export { default as ProfileScreen } from "./ProfileScreen";
 export { default as OrdersScreen } from "./OrdersScreen";
 export { default as EditProfile } from "./EditProfile";
+export { default as EditPassword } from "./EditPassword";
+export { default as EditLanguage } from "./EditLanguage";

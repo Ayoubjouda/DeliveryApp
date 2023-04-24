@@ -34,3 +34,8 @@ export { default as settingsIcon } from "./settings";
 export { default as callOrangeIcon } from "./callOrange";
 export { default as profileOrangeIcon } from "./profileOrange";
 export { default as editImageIcon } from "./editImage";
+export { default as checkIcon } from "./check";
+export { default as EN } from "./FlagEN";
+export { default as FR } from "./FlagFR";
+export { default as JP } from "./FlagJP";
+export { default as PG } from "./FlagPG";

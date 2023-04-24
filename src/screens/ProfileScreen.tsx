@@ -49,8 +49,8 @@ const ProfileScreen = ({ navigation }: any) => {
           <View className="mt-4">
             <Text className="text-lg font-AvenirHeavy">Settings</Text>
             <View className="">
-              <ProfileButton icon={lockOrangeIcon} title="Change Password" />
-              <ProfileButton icon={globeOrangeIcon} title="Language" />
+              <ProfileButton icon={lockOrangeIcon} title="Change Password" onPress={() => navigation.navigate("EditPassword")} />
+              <ProfileButton icon={globeOrangeIcon} title="Language" onPress={() => navigation.navigate("EditLanguage")} />
               <ProfileButton icon={notificationOrangeIcon} title="Notification" />
             </View>
           </View>

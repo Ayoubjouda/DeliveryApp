@@ -14,6 +14,8 @@ import {
   ProfileScreen,
   OrdersScreen,
   EditProfile,
+  EditPassword,
+  EditLanguage,
 } from "screens";
 import { createStackNavigator } from "@react-navigation/stack";
 import { RootStackParamList } from "src/utils/types";
@@ -88,6 +90,8 @@ const Navigation = (props: Props) => {
         <Stack.Screen name="Tracking" component={TrackingScreen} />
         <Stack.Screen name="DetailLocation" component={DetailLocation} />
         <Stack.Screen name="EditProfile" component={EditProfile} />
+        <Stack.Screen name="EditPassword" component={EditPassword} />
+        <Stack.Screen name="EditLanguage" component={EditLanguage} />
 
         <Stack.Group screenOptions={{ presentation: "transparentModal" }}>
           <Stack.Screen name="CodeConfirmation" component={CodeConfirmation} />

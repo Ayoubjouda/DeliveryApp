@@ -9,4 +9,6 @@ export type RootStackParamList = {
   DetailLocation: undefined;
   OverView: undefined;
   EditProfile: undefined;
+  EditPassword: undefined;
+  EditLanguage: undefined;
 };
